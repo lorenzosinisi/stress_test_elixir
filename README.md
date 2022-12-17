@@ -1,21 +1,12 @@
 # Bingo
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `bingo` to your list of dependencies in `mix.exs`:
-
 ```elixir
-def deps do
-  [
-    {:bingo, "~> 0.1.0"}
-  ]
-end
+
+--url: the url of the web app you want to test
+--count: how many parallel\* connections you want to open
+--every: how often you want to open those connections (use 0 to run it just once)
+
+Then run:
+
+mix attack --url http://localhost:4000 --count 10 --every 1000
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/bingo](https://hexdocs.pm/bingo).
-
